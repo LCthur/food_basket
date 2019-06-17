@@ -1,0 +1,39 @@
+.sign-up-form {
+  background-color: white;
+  margin-top: 30px;
+  box-shadow: 4px 3px 15px -5px rgba(0,0,0,0.75);
+ .signup-image {
+    height: auto;
+    background-image: url(https://cdn.dribbble.com/users/1043327/screenshots/2438076/05-_0-00-03-24_.jpg);
+    background-size: cover;
+    background-position: center;
+ }
+}
+
+.full-name {
+  display: flex;
+  justify-content: space-between;
+}
+
+.signup-title {
+  margin: 0 -15px 10px -15px  !important;
+}
+
+
+.prenom {
+  margin-right: 10px !important;
+}
+
+@media (max-width: 768px) {
+  .signup-image {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .full-name {
+    display: block;
+  }
+}
+
+

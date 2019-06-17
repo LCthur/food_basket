@@ -1,0 +1,35 @@
+.parent {
+  position: relative;
+  .child {
+    position: absolute;
+    top: 50%;
+    margin: 0 auto;
+  }
+}
+
+.sign-in-form {
+  height: 60vh;
+  background-color: white;
+  margin-top: 30px;
+  box-shadow: 4px 3px 15px -5px rgba(0,0,0,0.75);
+  .signin-image {
+    height: auto;
+    background-image: url(
+      https://image.freepik.com/free-vector/flat-bench-garden-landscape_23-2147546927.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .signin-image {
+    display: none;
+  }
+}

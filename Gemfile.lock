@@ -160,6 +160,9 @@ GEM
       rainbow (>= 2.2.2, < 4.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 1.7)
+    rubocop-rails (2.0.1)
+      rack (>= 1.1)
+      rubocop (>= 0.70.0)
     ruby-progressbar (1.10.1)
     sassc (2.0.1)
       ffi (~> 1.9)
@@ -237,6 +240,7 @@ DEPENDENCIES
   puma
   rails (= 5.2.3)
   redis
+  rubocop-rails
   sassc-rails
   simple_form
   solargraph

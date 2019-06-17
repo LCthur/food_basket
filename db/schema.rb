@@ -10,10 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_17_095128) do
+ActiveRecord::Schema.define(version: 2019_06_17_095834) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "aliments", force: :cascade do |t|
+    t.string "description"
+    t.string "dose"
+    t.bigint "panier_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["panier_id"], name: "index_aliments_on_panier_id"
+  end
+
+  create_table "paniers", force: :cascade do |t|
+    t.string "titre"
+    t.string "photo"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_paniers_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -26,8 +44,11 @@ ActiveRecord::Schema.define(version: 2019_06_17_095128) do
     t.string "nom"
     t.string "prenom"
     t.string "adresse"
+    t.string "telephone"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "aliments", "paniers"
+  add_foreign_key "paniers", "users"
 end

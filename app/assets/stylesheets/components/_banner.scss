@@ -1,29 +1,58 @@
-.banner {
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.vox-cdn.com%2Fthumbor%2FbXLQg6Go0D3GMWPNlJzrx5i82oE%3D%2F0x0%3A1920x1080%2F1600x900%2Fcdn.vox-cdn.com%2Fuploads%2Fchorus_image%2Fimage%2F54697823%2FFoodWaste1_noLogo.0.jpg&f=1);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+.main {
+  position: relative;
 }
 
-.banner-container {
-  p, h1 {
-    font-size: 36px;
-    color: white;
-    text-align: center;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  }
+.circle {
+  width: 986px;
+  height: 783px;
+  z-index: -1;
+  border-radius: 50%;
+  background-color: #87b4bd;
+  position: absolute;
+  top: -503px;
+  left: -243px;
+}
+
+.grid {
+  z-index: 2;
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+}
+.search {
+    margin-top: 70px;
+    margin-left: 45%;
 
   h1 {
-    font-size: 84px;
-    vertical-align: center;
-    font-weight: bold;
+    font-size: 64px;
+  }
+  p {
+    font-size: 18px;
   }
 }
+  .banner {
+    justify-self: flex-end;
+    z-index: -2;
+  }
+
+.search-form {
+  margin-top: 150px;
+  form {
+    display: flex;
+    justify-content: center;
+  }
+  button {
+    border-radius: 0 10px 10px 0;
+  }
+}
+
+#search-bar {
+  border-radius: 10px 0 0 10px;
+  border: 1px solid #ced4da;
+  padding: 5px 10px;
+  width: 100%;
+}
+
 
 
 

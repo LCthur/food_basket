@@ -5,7 +5,51 @@
   grid-template-columns: 1fr 1.5fr;
 }
 
+
 .information-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  .first-left {
+    height: 400px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(https://res.cloudinary.com/dlogliyoh/image/upload/v1560875915/undraw_journey_lwlj_zn2dhv.svg);
+  }
+  .first-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+  }
+  .second-left {
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+  }
+  .second-right {
+    height: 400px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(https://res.cloudinary.com/dlogliyoh/image/upload/v1560875892/map_okmymt.svg);
+  }
+  .third-left {
+    height: 400px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(https://res.cloudinary.com/dlogliyoh/image/upload/v1560875778/undraw_happy_birthday_s72n_lw8rq4.svg);
+  }
+  .third-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+  }
 }

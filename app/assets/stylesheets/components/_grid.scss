@@ -1,0 +1,11 @@
+.grid {
+  z-index: 2;
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+}
+
+.information-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}

@@ -1,39 +1,28 @@
+$blue: #87b4bd;
+
 .main {
   position: relative;
 }
 
-.circle {
-  width: 986px;
-  height: 783px;
-  z-index: -1;
-  border-radius: 50%;
-  background-color: #87b4bd;
-  position: absolute;
-  top: -503px;
-  left: -243px;
-}
 
-.grid {
-  z-index: 2;
-  margin-top: 50px;
-  display: grid;
-  grid-template-columns: 1fr 1.5fr;
-}
 .search {
     margin-top: 70px;
     margin-left: 45%;
 
   h1 {
     font-size: 64px;
+    color: white;
   }
   p {
     font-size: 18px;
+    color: white;
   }
 }
-  .banner {
-    justify-self: flex-end;
-    z-index: -2;
-  }
+
+.banner {
+  justify-self: flex-end;
+  z-index: -2;
+}
 
 .search-form {
   margin-top: 150px;
@@ -43,6 +32,9 @@
   }
   button {
     border-radius: 0 10px 10px 0;
+  }
+  p {
+    color: black;
   }
 }
 

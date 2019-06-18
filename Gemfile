@@ -11,6 +11,7 @@ gem 'redis'
 gem 'solargraph'
 gem 'rubocop-rails'
 gem 'geocoder'
+gem 'cloudinary', '~> 1.9.1'
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.6.1'

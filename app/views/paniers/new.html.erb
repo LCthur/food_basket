@@ -1,2 +1,11 @@
-<h1>Paniers#new</h1>
-<p>Find me in app/views/paniers/new.html.erb</p>
+<div class="container">
+  <h1>Proposez un panier</h1>
+  <%= simple_form_for @panier do |f| %>
+    <%= f.input :titre, label: 'Donnez un titre au panier',
+                input_html: { maxlength: 30},
+                placeholder: 'Produits laitiers et légumes...' %>
+    <%= f.input :category, as: :radio_buttons, collection: %w(Omnivore Végétarien Vegan),
+                label: 'Catégorie du panier' %>
+    <%= f.button :submit, class: 'btn btn-primary', value: 'Créer le panier' %>
+  <% end %>
+</div>

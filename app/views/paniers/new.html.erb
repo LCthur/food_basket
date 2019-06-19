@@ -6,6 +6,7 @@
                 placeholder: 'Produits laitiers et légumes...' %>
     <%= f.input :category, as: :radio_buttons, collection: %w(Omnivore Végétarien Vegan),
                 label: 'Catégorie du panier' %>
+    <%= f.input :deadline, label: 'Date de retrait' %>
     <%= f.button :submit, class: 'btn btn-primary', value: 'Créer le panier' %>
   <% end %>
 </div>

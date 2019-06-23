@@ -1,7 +1,7 @@
 class Panier < ApplicationRecord
-  mount_uploader :photo, PhotoUploader
   belongs_to :user
-  has_many :aliment
   validates :deadline, presence: true
   validates :titre, presence: true
+  mount_uploader :photo, PhotoUploader
+  acts_as_taggable_on :tags
 end

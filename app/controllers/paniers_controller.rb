@@ -16,6 +16,13 @@ class PaniersController < ApplicationController
   end
 
   def create
+    @panier = Panier.new(panier_params)
+    @panier.user = current_user
+    if @panier.save
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
   def delete
@@ -24,6 +31,6 @@ class PaniersController < ApplicationController
   private
 
   def panier_params
-    params.require(:panier).permit(:photo, :titre)
+    params.require(:panier).permit(:titre, :category, :deadline, :tag_list, :photo_cache, :photo)
   end
 end

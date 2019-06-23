@@ -1,15 +1,14 @@
 <div class="container">
   <h1>Proposez un panier</h1>
   <%= simple_form_for @panier do |f| %>
-    <%= f.input :titre, label: 'Donnez un titre au panier',
+    <%= f.input :titre, label: 'Titre',
                 input_html: { maxlength: 30},
                 placeholder: 'Produits laitiers et légumes...' %>
     <%= f.input :category, as: :radio_buttons, collection: %w(Omnivore Végétarien Vegan),
-                label: 'Catégorie du panier' %>
-    <%= f.input :aliment_ids, label: 'Sélectionner les aliments',
-                collection: @aliments %>
+                label: 'Type de panier' %>
     <%= f.input :deadline, label: 'Date et heure de retrait',
                 input_html: {class: "datepicker"} %>
+    <%= f.input :tag_list, label: "Aliments", hint: "Ajoutez les aliments séparés par des virgules." %>
     <%= f.input :photo %>
     <%= f.input :photo_cache, as: :hidden %>
     <%= f.button :submit, class: 'btn btn-primary', value: 'Proposer le panier' %>

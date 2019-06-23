@@ -6,7 +6,12 @@
                 placeholder: 'Produits laitiers et légumes...' %>
     <%= f.input :category, as: :radio_buttons, collection: %w(Omnivore Végétarien Vegan),
                 label: 'Catégorie du panier' %>
-    <%= f.input :deadline, label: 'Date de retrait' %>
-    <%= f.button :submit, class: 'btn btn-primary', value: 'Créer le panier' %>
+    <%= f.input :aliment_ids, label: 'Sélectionner les aliments',
+                collection: @aliments %>
+    <%= f.input :deadline, label: 'Date et heure de retrait',
+                input_html: {class: "datepicker"} %>
+    <%= f.input :photo %>
+    <%= f.input :photo_cache, as: :hidden %>
+    <%= f.button :submit, class: 'btn btn-primary', value: 'Proposer le panier' %>
   <% end %>
 </div>

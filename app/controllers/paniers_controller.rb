@@ -11,6 +11,8 @@ class PaniersController < ApplicationController
 
   def new
     @panier = Panier.new
+    @aliments = []
+    Aliment.all.each { |aliment| @aliments << aliment.description }
   end
 
   def create

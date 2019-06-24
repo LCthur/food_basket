@@ -6,7 +6,7 @@ class User < ApplicationRecord
   validates :adresse, presence: true
   geocoded_by :adresse
   after_validation :geocode, if: :will_save_change_to_adresse?
-  has_many :paniers
+  has_many :paniers, dependent: :destroy
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 end

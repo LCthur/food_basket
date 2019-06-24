@@ -16,8 +16,10 @@ User.create!(
     password: 'tototiti',
     nom: 'Thurre',
     prenom: 'Loïc',
-    adresse: 'Routes des Moulins 23, 1913 Saillon',
-    telephone: '+41787114053'
+    adresse: 'Renens',
+    telephone: '+41787114053',
+    latitude: 46.5349093,
+    longitude: 6.5928442
   )
 
 Panier.create!(

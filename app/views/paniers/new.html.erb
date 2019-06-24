@@ -1,7 +1,7 @@
-<div class="container col-9">
-  <h1>Proposez un panier</h1>
+<div class="container new-panier-card p-3 col-9 col-md-6">
+  <h1 class="text-center">Proposez un panier</h1>
   <%= simple_form_for @panier do |f| %>
-    <%= f.input :titre, label: 'Titre',
+    <%= f.input :titre, label: 'Titre du panier',
                 input_html: { maxlength: 30},
                 placeholder: 'Produits laitiers et légumes...' %>
     <div class="radio-buttons">
@@ -10,7 +10,8 @@
     </div>
     <%= f.input :deadline, label: 'Date et heure de retrait',
                 input_html: {class: "datepicker"} %>
-    <%= f.input :tag_list, label: "Aliments", hint: "Ajoutez les aliments séparés par des virgules." %>
+    <%= f.input :tag_list, label: "Aliments", hint: "Ajoutez les aliments séparés par des        virgules.",
+                required: true %>
     <%= f.input :photo, input_html: { class: 'btn-hidden'},
             label_html: { class: 'upload-photo'}, label: '📷 Ajouter une photo'  %>
     <%= f.input :photo_cache, as: :hidden %>

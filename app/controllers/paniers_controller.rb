@@ -2,6 +2,8 @@ class PaniersController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index]
   def index
     @query = params[:query]
+    @paniers_a_proximite = []
+    User.near(@query, 10).each { |user| @paniers_a_proximite << user.paniers }
   end
 
   def show

@@ -1,5 +1,9 @@
 <div class="container">
   <h1>TEST PAGE</h1>
+  <% console %>
   <p>Panier près de <%= @query %></p>
+  <% @paniers_a_proximite[0].each  do |panier|   %>
+    <p><%= panier.titre %></p>
+  <% end %>
 </div>
 

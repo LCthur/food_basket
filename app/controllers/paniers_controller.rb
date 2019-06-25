@@ -7,7 +7,8 @@ class PaniersController < ApplicationController
     @markers = @paniers_alentour.map do |panier|
       {
         lat: panier.latitude,
-        lng: panier.longitude
+        lng: panier.longitude,
+        infoWindow: render_to_string(partial: "infowindow", locals: { panier: panier })
       }
     end
   end

@@ -2,7 +2,14 @@ class PaniersController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index]
   def index
     @query = params[:query]
-    @paniers_alentour = Panier.near(@query, 10)
+    @paniers_alentour = Panier.near(@query, 20)
+
+    @markers = @paniers_alentour.map do |panier|
+      {
+        lat: panier.latitude,
+        lng: panier.longitude
+      }
+    end
   end
 
   def show

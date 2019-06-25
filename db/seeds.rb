@@ -32,17 +32,13 @@ Panier.create!(
     user_id: 1,
     titre: 'Fruits frais du jardin',
     deadline: '2019-06-27 12:00',
-    adresse: 'Renens',
-    latitude: 46.5349093,
-    longitude: 6.5928442
+    adresse: "Avenue mont d'or 37, Lausanne"
   )
 
 Panier.create!(
     user_id: 2,
     titre: 'Légumes bios',
     deadline: '2019-07-27 12:00',
-    adresse: 'Renens',
-    latitude: 46.5349093,
-    longitude: 6.5928442
+    adresse: 'Chemin du Closel, Renens'
   )
 

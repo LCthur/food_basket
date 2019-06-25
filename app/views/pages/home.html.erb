@@ -6,16 +6,13 @@
       <p>Réduisez le gaspillage alimentaire</p>
       <div class="search-form">
         <p id="search-text">Trouvez des paniers près de chez vous</p>
-        <!-- <form action="/paniers" method="get">
-            <input type="text" id="search-bar" placeholder="Entrez un lieu" class="form-control">
-            <button type="submit" class="btn btn-primary"><i class="fas fa-search-location"></i></button>
-        </form> -->
         <%= form_tag paniers_path, method: :get do %>
           <%= text_field_tag :query,
             params[:query],
-            class: "form-control",
-            placeholder: "Find a movie"
+            id:'search-bar',
+            placeholder: "Entrez un lieu"
           %>
+           <button type="submit" class="btn btn-primary"><i class="fas fa-search-location"></i></button>
         <% end %>
       </div>
     </div>

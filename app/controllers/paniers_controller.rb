@@ -1,8 +1,7 @@
 class PaniersController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index]
   def index
-    @navbar_visible = true
-    @paniers = Panier.all
+    @query = params[:query]
   end
 
   def show

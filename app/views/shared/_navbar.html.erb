@@ -9,13 +9,19 @@
 
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-            <form action="#" class="d-flex">
-              <input type="text" id="search-bar" placeholder="Entrez un lieu" class="form-control">
-              <button type="submit" class="btn btn-primary search-button"><i class="fas fa-search-location"></i></button>
-            </form>
-        </li>
+    <ul class="navbar-nav">
+      <li class="d-flex">
+          <%= form_tag paniers_path, method: :get do %>
+          <%= text_field_tag :query,
+            params[:query],
+            id:'search-navbar',
+            placeholder: "Entrez un lieu"
+          %>
+          <div>
+        <!--     <button type="submit" class="btn btn-primary search-button"><i class="fas fa-search-location"></i></button> -->
+          </div>
+        <% end %>
+      </li>
       <% if user_signed_in? %>
         <li class="nav-item dropdown ml-3">
           <%= image_tag "https://i.pinimg.com/originals/04/c2/12/04c212c3e90c1bfa630555f5f5fe479d.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>

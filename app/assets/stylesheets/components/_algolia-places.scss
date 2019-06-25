@@ -1,0 +1,75 @@
+/* Main input wrapper */
+.algolia-places {
+  font-size: 1em !important;
+}
+
+/* The algolia-places input */
+.ap-input, .ap-hint {}
+
+/* The style of the svg icons when the input is on hover */
+.ap-input:hover ~ .ap-input-icon svg,
+.ap-input:focus ~ .ap-input-icon svg,
+.ap-input-icon:hover svg {}
+
+/* The dropdown style */
+.ap-dropdown-menu {
+  font-size: 1rem !important;
+}
+
+/* The suggestions style */
+.ap-suggestion {
+  font-size: 1rem !important;
+}
+
+/* The highlighted names style */
+.ap-suggestion em {
+  font-size: 1rem !important;
+}
+.ap-name {
+  font-size: 1rem !important;
+}
+
+/* The addresses style */
+.ap-address {
+  font-size: 1em !important;
+}
+
+/* The icons of each suggestions ( can be a building or a pin ) */
+.ap-suggestion-icon {}
+
+/* The style of the svg inside the .ap-suggestion-icon */
+.ap-suggestion-icon svg {}
+
+/* The icons inside the input ( can be a pin or a cross ) */
+.ap-input-icon {}
+
+/* The style of the svg inside the .ap-input-icon */
+.ap-input-icon svg {}
+
+/* .a-cursor is the class a suggestion go on hover */
+.ap-cursor {}
+
+/* The style of the svg icon, when the .ap-suggestion is on hover */
+.ap-cursor .ap-suggestion-icon svg {}
+
+/* The styles of the Algolia Places input footer */
+.ap-footer {
+  font-size: 1rem !important;
+}
+
+/* The styles of the Algolia Places input footer links */
+.ap-footer a {
+  span {
+    font-size: 1rem !important;
+  }
+}
+
+/* The styles of the Algolia Places input footer svg icons */
+.ap-footer a svg {
+  font-size: 1rem !important;
+}
+
+/* The styles of the Algolia Places input footer on hover */
+.ap-footer:hover {
+  font-size: 1rem !important;
+}

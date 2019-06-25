@@ -4,6 +4,7 @@ class PaniersController < ApplicationController
     @query = params[:query]
     @paniers_a_proximite = []
     User.near(@query, 10).each { |user| @paniers_a_proximite << user.paniers }
+    @paniers_a_proximite.map! { |panier| panier[0] }
   end
 
   def show

@@ -12,6 +12,7 @@
                 input_html: {class: "datepicker"} %>
     <%= f.input :tag_list, label: "Aliments", hint: "Ajoutez les aliments séparés par des        virgules.",
                 required: true %>
+    <%= f.input :adresse, required: true %>
     <%= f.input :photo, input_html: { class: 'btn-hidden'},
             label_html: { class: 'upload-photo'}, label: '📷 Ajouter une photo'  %>
     <%= f.input :photo_cache, as: :hidden %>

@@ -16,10 +16,7 @@ User.create!(
     password: 'tototiti',
     nom: 'Thurre',
     prenom: 'Loïc',
-    adresse: 'Renens',
-    telephone: '+41787114053',
-    latitude: 46.5349093,
-    longitude: 6.5928442
+    telephone: '+41787114053'
   )
 
 User.create!(
@@ -28,21 +25,24 @@ User.create!(
     password: 'tototiti',
     nom: 'titi',
     prenom: 'toto',
-    adresse: 'Renens',
-    telephone: '+41787114053',
-    latitude: 46.5349093,
-    longitude: 6.5928442
+    telephone: '+41787114053'
   )
 
 Panier.create!(
     user_id: 1,
     titre: 'Fruits frais du jardin',
-    deadline: '2019-06-27 12:00'
+    deadline: '2019-06-27 12:00',
+    adresse: 'Renens',
+    latitude: 46.5349093,
+    longitude: 6.5928442
   )
 
 Panier.create!(
     user_id: 2,
     titre: 'Légumes bios',
-    deadline: '2019-07-27 12:00'
+    deadline: '2019-07-27 12:00',
+    adresse: 'Renens',
+    latitude: 46.5349093,
+    longitude: 6.5928442
   )
 

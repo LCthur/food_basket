@@ -1,15 +1,20 @@
-<div class="container">
-  <h1>Paniers près de <%= @query %></h1>
-  <% @paniers_alentour.each  do |panier| %>
-    <p><%= panier.titre %></p>
-  <% end %>
 
-  <div
-  id="map"
-  style="width: 100%;
-  height: 600px;"
-  data-markers="<%= @markers.to_json %>"
-  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-  ></div>
-</div>
+  <h1>Paniers près de <%= @query %></h1>
+  <div class="d-flex">
+    <div class="index-panier-grid">
+      <% @paniers_alentour.each  do |panier| %>
+      <div class="index-panier-card p-3">
+        <p><%= panier.titre %></p>
+        <p><%= panier.tag_list %></p>
+      </div>
+    <% end %>
+    </div>
+    <div
+    id="map"
+    data-markers="<%= @markers.to_json %>"
+    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+    ></div>
+  </div>
+
+
 

@@ -28,17 +28,20 @@ User.create!(
     telephone: '+41787114053'
   )
 
-Panier.create!(
+panier = Panier.create!(
     user_id: 1,
     titre: 'Fruits frais du jardin',
     deadline: '2019-06-27 12:00',
     adresse: "Avenue mont d'or 37, Lausanne"
   )
 
-Panier.create!(
+panier.tag_list.add("Poires")
+
+panier = Panier.create!(
     user_id: 2,
     titre: 'Légumes bios',
     deadline: '2019-07-27 12:00',
     adresse: 'Chemin du Closel, Renens'
   )
+panier.tag_list.add("Brocoli")
 

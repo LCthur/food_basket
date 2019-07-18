@@ -39,6 +39,6 @@ class PaniersController < ApplicationController
   private
 
   def panier_params
-    params.require(:panier).permit(:titre, :category, :deadline, :tag_list, :photo_cache, :photo)
+    params.require(:panier).permit(:adresse, :titre, :category, :deadline, :tag_list, :photo_cache, :photo)
   end
 end

@@ -1,30 +1,14 @@
-
-  <h1 class="ml-4">Paniers près de <%= @query %></h1>
-  <div class="d-flex">
-    <div class="index-panier-grid">
-      <% @paniers_alentour.each  do |panier| %>
-      <div class="index-panier-card">
-        <div class="index-panier-card-title">
-          <h2><%= panier.titre %></h2>
-        </div>
-        <div class="content-position p-3">
-          <div class="panier-card-content">
-            <p><i class="fas fa-carrot"></i> <%= panier.tag_list %></p>
-            <p><i class="fas fa-map-marker-alt"></i> <%= panier.adresse %></p>
-          </div>
-          <div class="booking-btn">
-            <a href="#" class="btn btn-primary">Réserver</a>
-          </div>
-        </div>
-      </div>
-    <% end %>
+<% unless @paniers_alentour[0].nil? %>
+<%= render "panier-alentour", paniers_alentour: @paniers_alentour, query: @query %>
+<% else %>
+  <div class="container">
+    <h2 class="text-center">Il n'existe encore aucun panier dans cette région.</h2>
+    <h2 class="text-center">Parlez-en autour de vous 😀</h2>
+    <div class="text-center">
+      <a href="#" class="media-button"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="media-button"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="media-button"><i class="fab fa-linkedin-in"></i></a>
     </div>
-    <div
-    id="map"
-    data-markers="<%= @markers.to_json %>"
-    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-    ></div>
   </div>
-
-
+<% end %>
 

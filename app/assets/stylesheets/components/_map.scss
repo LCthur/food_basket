@@ -13,3 +13,9 @@
 .mapboxgl-popup {
   max-width: 200px;
 }
+
+@media (max-width: 1140px) {
+  #map {
+    display: none;
+  }
+}

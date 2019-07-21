@@ -12,10 +12,16 @@
   box-shadow: 0 0 12px grey;
   border-radius: 5px;
   width: 95%;
-  height: 250px;
+  height: 230px;
   justify-self:center;
   .content-position {
     position: absolute;
     bottom: 0;
+  }
+}
+
+@media (max-width: 1020 px) {
+  .index-panier-card {
+    background-size: 20%;
   }
 }

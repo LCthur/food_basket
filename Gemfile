@@ -12,7 +12,7 @@ gem 'solargraph'
 gem 'rubocop-rails'
 gem 'geocoder'
 gem 'cloudinary'
-gem 'carrierwave', '~> 1.2'
+gem 'carrierwave', '~> 1.3'
 gem 'acts-as-taggable-on', '~> 6.0'
 
 gem 'autoprefixer-rails'
